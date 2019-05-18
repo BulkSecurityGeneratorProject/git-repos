@@ -1,0 +1,25 @@
+{
+  "gitReposApp": {
+    "gitRepos": {
+      "home": {
+        "title": "Git Repos",
+        "createLabel": "Thêm mới một Git Repos",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Git Repos"
+      },
+      "created": "Một Git Repos mới được tạo với định danh {{ param }}",
+      "updated": "Một Git Repos cập nhật với định danh {{ param }}",
+      "deleted": "Một Git Repos đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Git Repos {{ id }}?"
+      },
+      "detail": {
+        "title": "Git Repos"
+      },
+      "gitName": "Git Name",
+      "gitUrl": "Git Url",
+      "gitUser": "Git User",
+      "gitPass": "Git Pass",
+      "gitKey": "Git Key"
+    }
+  }
+}

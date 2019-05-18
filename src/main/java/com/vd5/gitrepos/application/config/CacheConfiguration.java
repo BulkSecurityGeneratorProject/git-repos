@@ -46,6 +46,20 @@ public class CacheConfiguration {
             createCache(cm, com.vd5.gitrepos.application.domain.User.class.getName());
             createCache(cm, com.vd5.gitrepos.application.domain.Authority.class.getName());
             createCache(cm, com.vd5.gitrepos.application.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.vd5.gitrepos.application.domain.GitRepos.class.getName());
+            createCache(cm, com.vd5.gitrepos.application.domain.Ticket.class.getName());
+            createCache(cm, com.vd5.gitrepos.application.domain.Region.class.getName());
+            createCache(cm, com.vd5.gitrepos.application.domain.Country.class.getName());
+            createCache(cm, com.vd5.gitrepos.application.domain.Location.class.getName());
+            createCache(cm, com.vd5.gitrepos.application.domain.Department.class.getName());
+            createCache(cm, com.vd5.gitrepos.application.domain.Department.class.getName() + ".employees");
+            createCache(cm, com.vd5.gitrepos.application.domain.Task.class.getName());
+            createCache(cm, com.vd5.gitrepos.application.domain.Task.class.getName() + ".jobs");
+            createCache(cm, com.vd5.gitrepos.application.domain.Employee.class.getName());
+            createCache(cm, com.vd5.gitrepos.application.domain.Employee.class.getName() + ".jobs");
+            createCache(cm, com.vd5.gitrepos.application.domain.Job.class.getName());
+            createCache(cm, com.vd5.gitrepos.application.domain.Job.class.getName() + ".tasks");
+            createCache(cm, com.vd5.gitrepos.application.domain.JobHistory.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }
