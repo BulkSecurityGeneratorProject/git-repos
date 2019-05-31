@@ -1,0 +1,35 @@
+{
+    "name": "GitRepos",
+    "fields": [
+        {
+            "fieldName": "gitName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gitUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gitUser",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gitPass",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "gitKey",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190518042406",
+    "entityTableName": "git_repos",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

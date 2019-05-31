@@ -1,0 +1,25 @@
+{
+  "gitReposApp": {
+    "gitRepos": {
+      "home": {
+        "title": "Git Repos",
+        "createLabel": "Create a new Git Repos",
+        "createOrEditLabel": "Create or edit a Git Repos"
+      },
+      "created": "A new Git Repos is created with identifier {{ param }}",
+      "updated": "A Git Repos is updated with identifier {{ param }}",
+      "deleted": "A Git Repos is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Git Repos {{ id }}?"
+      },
+      "detail": {
+        "title": "Git Repos"
+      },
+      "gitName": "Git Name",
+      "gitUrl": "Git Url",
+      "gitUser": "Git User",
+      "gitPass": "Git Pass",
+      "gitKey": "Git Key"
+    }
+  }
+}

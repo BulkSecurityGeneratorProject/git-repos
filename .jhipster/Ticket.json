@@ -1,0 +1,35 @@
+{
+    "name": "Ticket",
+    "fields": [
+        {
+            "fieldName": "ticketNumber",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "ticketUrl",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ticketEstimation",
+            "fieldType": "Double"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "gitRepos",
+            "otherEntityRelationshipName": "ticket",
+            "relationshipName": "repos",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190518042407",
+    "entityTableName": "ticket",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

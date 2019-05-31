@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-ticket-heading" jhiTranslate="gitReposApp.ticket.home.createOrEditLabel">Create or edit a Ticket</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!ticket.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gitReposApp.ticket.ticketNumber" for="field_ticketNumber">Ticket Number</label>
+                    <input type="number" class="form-control" name="ticketNumber" id="field_ticketNumber"
+                           formControlName="ticketNumber"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gitReposApp.ticket.ticketUrl" for="field_ticketUrl">Ticket Url</label>
+                    <input type="text" class="form-control" name="ticketUrl" id="field_ticketUrl"
+                           formControlName="ticketUrl"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gitReposApp.ticket.ticketEstimation" for="field_ticketEstimation">Ticket Estimation</label>
+                    <input type="number" class="form-control" name="ticketEstimation" id="field_ticketEstimation"
+                           formControlName="ticketEstimation"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gitReposApp.ticket.repos" for="field_repos">Repos</label>
+                    <select class="form-control" id="field_repos" name="repos" formControlName="repos">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="gitReposOption.id === editForm.get('repos').value?.id ? editForm.get('repos').value : gitReposOption" *ngFor="let gitReposOption of gitrepos; trackBy: trackGitReposById">{{gitReposOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-git-repos-heading" jhiTranslate="gitReposApp.gitRepos.home.createOrEditLabel">Create or edit a Git Repos</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!gitRepos.id">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gitReposApp.gitRepos.gitName" for="field_gitName">Git Name</label>
+                    <input type="text" class="form-control" name="gitName" id="field_gitName"
+                           formControlName="gitName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gitReposApp.gitRepos.gitUrl" for="field_gitUrl">Git Url</label>
+                    <input type="text" class="form-control" name="gitUrl" id="field_gitUrl"
+                           formControlName="gitUrl"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gitReposApp.gitRepos.gitUser" for="field_gitUser">Git User</label>
+                    <input type="text" class="form-control" name="gitUser" id="field_gitUser"
+                           formControlName="gitUser"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gitReposApp.gitRepos.gitPass" for="field_gitPass">Git Pass</label>
+                    <input type="text" class="form-control" name="gitPass" id="field_gitPass"
+                           formControlName="gitPass"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="gitReposApp.gitRepos.gitKey" for="field_gitKey">Git Key</label>
+                    <input type="text" class="form-control" name="gitKey" id="field_gitKey"
+                           formControlName="gitKey"/>
+                </div>
+
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
